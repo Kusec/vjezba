@@ -1,24 +1,59 @@
 <!DOCTYPE HTML>
 <html lang="hr">
 	<head>
-		<title>Primjeri</title>
+		<title>Programiranje web aplikacija</title>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<meta name="author" content="Marko Kušec">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="shortcut icon" type="image/x-icon" href="nogomet.ico">
-		
-		<style>
-            p{color:green; size: 10in;}
-			body { margin: 1em; }
-		</style>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            body {margin: 1em;}
+            form {width:300px;}
+        </style>
 	</head>
+	<body>
+        <form action="showuser2.php" method="post">
+            <div class="form-group">
+                <label for="firstname">First Name *</label>	
+                <input type="text" id="firstname" name="firstname" placeholder="Your first name..." class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name *</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Your last name..." class="form-control" required>                
+            </div>
+            <div class="form-group">
+                <label for="email">Your E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="Your E-mail..." class="form-control" required>
 
-    <body>
-        <h1>This is a Heading</h1>
-        <p>This is a paragraph</p>
-        <p>This is another paragraph</p>
-        
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" class="form-control">
+                    <option value="">Please select</option>
+                    <option value="BE">Belgium</option>
+                    <option value="HR" selected>Croatia</option>
+                    <option value="LU">Luxembourg</option>
+		    <option value="HU">Hungary</option>
+
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message"placeholder="Entry your message..." class="form-control"></textarea>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Send">
+                <input type="submit" class="btn btn-default" value="Reset">
+
+            </div>
+        </form>
     </body>
+ 
 </html>
